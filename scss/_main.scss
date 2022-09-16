@@ -1,0 +1,79 @@
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.main{
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    background-color: $irispurple;
+    color: $white;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    @media (max-width: 43.75rem) {
+        background-color: transparent;
+      }
+
+    @keyframes typewriter {
+        to { 
+            left: 100%;
+        }
+    }
+}
+
+.type {
+    font-family: "Meta", sans-serif;
+    transition: all 0.5s;
+    -webkit-text-stroke: .25rem #d6f4f4;
+    transition: all 0.5s;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: $font-xxl;
+    text-align: center;
+    color: transparent;
+    text-shadow: .625rem .625rem 0rem #d0627c,
+    .9375rem .9375rem 0rem #dd888d,
+    1.25rem 1.25rem 0rem #eabec3,
+    1.5625rem 1.5625rem 0rem #c2808c,
+    2.8125rem 2.8125rem .625rem #2c306d;
+    cursor: pointer;
+
+    &:hover {
+            position: relative;
+            font-variation-settings: "wght" 100, "ital" 0;
+            text-shadow: none;
+        }
+    
+    &:hover::before,
+    &:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &:hover::after{
+        background: $irispurple;
+        animation: 
+        typewriter 550ms steps(10) forwards;
+        
+        @include breakpoint(phone-only) {
+            background:transparent;
+            transition: all 300ms;
+            animation: all 300ms steps(20) backwards;
+        } 
+        
+    }
+
+span {
+    height: inherit;
+    max-width: max-content;
+    color: black;
+}
+}

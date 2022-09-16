@@ -1,0 +1,179 @@
+.projects {
+    position: relative;
+    background-color: $irispurple;
+    color: $titanwhite;
+    height: 70vh;
+    width: 100%;  
+    
+    @include breakpoint(phone-only) {
+        height: fit-content;
+        background-color: white;
+    }
+
+    &__title {
+        padding-top: 2rem;
+        font-size: $font-xl;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 30vh;
+        padding-top: 2rem;
+        box-sizing: border-box;
+
+        @include breakpoint(phone-only) {
+            flex-direction: column;
+            height: auto;
+            flex-wrap: wrap;
+            padding: 0 auto;
+        }
+
+        .layout {
+            width: 100%;
+            height: fit-content;
+            margin-left: 1rem;
+
+            @include breakpoint(phone-only) {
+                flex-direction: column;
+                flex-flow: column wrap;
+                padding: .625rem;
+                width: 21.875rem;
+                height: 21.875rem;
+                gap: 31.25rem;
+                margin-right: 1.25rem;
+            }
+
+            .card {
+                flex-wrap: wrap;
+                width: 18.75rem;
+                height: 6rem;
+
+                &__img {
+                    width: 110%;
+                    object-fit: cover;
+                    transition: all 100ms ease-out;
+                    cursor: pointer;
+        
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+        
+                .btn { 
+                    margin-left: .2656rem;
+                    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                    border: none;
+                    color: $white;
+                    border-radius: .3125rem;
+                    transition: all 0.3s ease;
+                    outline: none;
+                    cursor: pointer;
+        
+                    &:hover {
+                        background: #c797eb;
+                        transition: all 0.3s ease;
+                    }
+        
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .more {
+        width: 50%;
+        position: absolute;
+        bottom: 10%;
+        left: 45%;
+
+        &__link {
+           position: absolute;
+           color: $white;
+
+           @include breakpoint(phone-only) {
+            top: 15vh;
+            left: -24%;
+            color: $titanwhite;
+            text-decoration: underline;
+         }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+      }
+  }
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    transition: all 500ms ease-in-out;
+   
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center bottom;
+
+    &.popup1 {
+        background-image: url('/img/reactAdmin.png');
+    }
+
+    &.popup2 {
+        background-image: url('/img/MeTube.png');
+    }
+
+    &.popup3 {
+        background-image: url('/img/MyToDoList.png');
+    }
+
+    &.popup4 {
+        background-image: url('/img/timetrackingdashboard.png');
+    }
+
+    &__close {
+        position: absolute;
+            top: 2px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 3rem;
+            font-weight: bold;
+            text-decoration: none;
+      }
+  }
+
+
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    color: $carrot;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
