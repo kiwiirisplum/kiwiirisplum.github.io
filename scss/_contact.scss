@@ -1,0 +1,77 @@
+.contact {
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    .typing-demo {
+      width: 11ch;
+      animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-size: 1.5rem;
+      color: $irispurple;
+      padding: 1.25rem 0;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+    
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    @include breakpoint(phone-only) {
+        height: auto;
+    
+        .typing-demo {
+          display: none;
+        }
+
+    }
+    & a {
+        color: $irispurple;
+        padding-right: 1.25rem;
+    }
+
+
+}
+// .wavy {
+//   position:relative;
+//   margin-top: 1.25rem;
+//   -webkit-box-reflect:below -12px 
+//   linear-gradient(transparent,rgba(0,0,0,0.2));
+//   z-index: 1;
+
+//     span {
+//     position:relative;
+//     display:inline-block;
+//     font-size: 2rem;
+//     color: $carrot;
+//     animation:animate 1s ease-in-out infinite;
+//     animation-delay:calc(0.1s * var(--i));
+//   }
+
+//   @keyframes animate
+// {
+//   0%
+//   {
+//     transform:translateY(0px);
+//   }
+//   20%
+//   {
+//     transform:translateY(-1.25rem);
+//   }
+//   40%,100%
+//   {
+//     transform:translateY(0px);
+//   }
+// }
+// }
+
+

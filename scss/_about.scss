@@ -1,0 +1,55 @@
+.about {
+  background-color: transparent;
+  color: $lavenderblue;
+  height: 100vh;
+  padding: 1.5rem 1.5rem;
+
+    .content {
+    margin: 0 auto;
+    max-width: 48rem;
+
+    &__left {
+      position: relative;  
+      }
+  
+    &__right {
+
+        img {
+        height: 18.75rem;
+        width: 18.75rem;
+        object-fit: cover;
+        border-radius: 1.5625rem;
+        margin-right: 80px;
+
+        @include breakpoint(phone-only) {
+         margin: 30px;
+        }
+        
+        &:nth-of-type(2) {
+          @include breakpoint(phone-only) {
+            display: none;
+          }
+        }
+        }
+    }
+
+   }
+   .highlight {
+    display: inline-block;
+    color: $carrot;
+    text-decoration: wavy underline;
+
+    &:nth-of-type(2) {
+      
+      &:hover {
+        margin-left: 10px;
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.3);
+        cursor: pointer;
+      }
+    }
+}
+}   
+   
+
+
