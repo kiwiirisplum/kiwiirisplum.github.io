@@ -1,0 +1,64 @@
+@import "../../global.scss";
+
+.contact {
+    margin-top: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+       position: absolute;
+       left: 1.875rem;
+    }
+
+    .middle {
+        position: absolute;
+        right: 43.75rem;
+        color: $irispurple;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.125rem;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .socialMedia {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            margin: .9375rem;
+            gap: 20px;
+
+            a {
+                text-decoration: none;
+                color: $irispurple;
+            }
+        }
+    }
+
+    .right {
+        position: absolute;
+        right: 1.875rem
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        position: relative;
+    }
+    .left {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+
+    .middle {
+        position: absolute;
+        left: 9.5rem;
+        bottom: 0;
+    }
+}

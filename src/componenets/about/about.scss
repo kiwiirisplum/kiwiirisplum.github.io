@@ -1,0 +1,72 @@
+@import "../../global.scss";
+
+.about {
+    display: flex;
+    position: relative;
+    top: 100px;
+    background-color: $bluechalk;
+    color: $lavenderblue;
+    width: 100%;
+    height: 80vh;
+
+    .aboutme {
+        width: 27.8125rem;
+        padding-top: 1.875rem;
+        padding-left: 5rem;
+        line-height: 1.5;
+
+        .highlight {
+            text-decoration: none;
+            color: $carrot;
+        }
+    }
+
+    .right {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 700px;
+        height: 500px;
+
+        .imageone {
+            width: 350px;
+            height: 15.625rem;
+            background-image: url(../../assets/shan2.JPG);
+            background-size: cover;
+        }
+
+        .imagetwo {
+            position: absolute;
+            right: 0;
+            width: 350px;
+            height: 250px;
+            background-image: url(../../assets/shanImg2.jpg);
+            background-size: cover;
+        }
+    }
+}
+
+@media (max-width: 768px)  {
+
+    .about {
+        height: fit-content;
+        font-size: .75rem;
+        padding-right: 15px;
+        background-color: $bluechalk;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+
+        .imageone {
+           position: absolute;
+           bottom: -9.375rem;
+           right: -0.625rem;
+        }
+
+        .imagetwo {
+            display: none;
+        }
+    }
+}

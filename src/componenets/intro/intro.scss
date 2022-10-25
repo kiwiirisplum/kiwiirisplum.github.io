@@ -1,0 +1,80 @@
+@import "../../global.scss";
+
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.intro {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 83vh;
+    background-color: $irispurple;
+    color: $white;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    // @keyframes typewriter {
+    //     to { 
+    //         left: 100%;
+    //     }
+    // }
+
+    .type {
+        font-family: "Meta", sans-serif;
+        -webkit-text-stroke: .25rem #d6f4f4;
+        font-variation-settings: "wght" 900, "ital" 1;
+        font-size: $font-xxl;
+        text-align: center;
+        color: transparent;
+        text-shadow: .625rem .625rem 0rem #d0627c,
+        .9375rem .9375rem 0rem #dd888d,
+        1.25rem 1.25rem 0rem #eabec3,
+        1.5625rem 1.5625rem 0rem #c2808c,
+        2.8125rem 2.8125rem .625rem #2c306d;
+        cursor: pointer;
+    
+        // &:hover {
+        //         position: relative;
+        //         font-variation-settings: "wght" 100, "ital" 0;
+        //         text-shadow: none;
+        //         z-index: 30;
+        //     }
+        
+        // &:hover::before,
+        // &:hover::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: 30;
+        // }
+    
+        // &:hover::after{
+        //     background: $irispurple;
+        //     z-index: 30;
+        // }
+    
+    span {
+        height: inherit;
+        max-width: max-content;
+        color: transparent;
+    }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        background-color: transparent;
+    }
+}
